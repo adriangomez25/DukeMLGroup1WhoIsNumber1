@@ -1,0 +1,26 @@
+Merediths-MacBook-Pro:~ meredithbrown$ ssh mjb128@dcc-slogin.oit.duke.edu
+################################################################################
+# You are about to access a Duke University computer network that is intended  #
+# for authorized users only. You should have no expectation of privacy in      #
+# your use of this network. Use of this network constitutes consent to         #
+# monitoring, retrieval, and disclosure of any information stored within the   #
+# network for any purpose including criminal prosecution.                      #
+################################################################################
+mjb128@dcc-slogin.oit.duke.edu's password: 
+Last login: Wed Jan 30 15:05:13 2019 from 10.197.144.28
+Last login by user mjb128: Wed Jan 30 15:05 - 19:13 (04:08) from: 10.197.144.28
+mjb128@dcc-slogin-03  ~ $ module add Anaconda3/5.1.0
+Anaconda3 5.1.0
+mjb128@dcc-slogin-03  ~ $ module add CUDA/9.0
+CUDA 9.0
+mjb128@dcc-slogin-03  ~ $ conda create -n plus_ds python=3.6
+mjb128@dcc-slogin-03  ~ $ source activate plus_ds
+(plus_ds) mjb128@dcc-slogin-03  ~ $ pip install tensorflow_gpu
+mjb128@dcc-dsplus-gpu-05  ~ $ source activate plus_ds
+(plus_ds) mjb128@dcc-dsplus-gpu-05  ~ $ cd /datacommons/plusds/team1
+
+(plus_ds) mjb128@dcc-dsplus-gpu-05  /datacommons/plusds/team1 $ module load Anaconda3/5.1.0
+Anaconda3 5.1.0
+(plus_ds) mjb128@dcc-dsplus-gpu-05  /datacommons/plusds/team1 $ export myport=12345
+(plus_ds) mjb128@dcc-dsplus-gpu-05  /datacommons/plusds/team1 $ export XDG_RUNTIME_DIR=""
+(plus_ds) mjb128@dcc-dsplus-gpu-05  /datacommons/plusds/team1 $ jupyter-notebook --no-browser --port=$myport --ip='0.0.0.0'
